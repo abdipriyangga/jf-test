@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { http } from "../../helpers/http";
 
@@ -77,7 +78,6 @@ const authLogout = () => {
   return async (dispatch) => {
     dispatch({ type: "SET_AUTH_LOGOUT" });
     dispatch({ type: "SET_CLEAR_HISTORY" });
-    dispatch({ type: "CLEAR_CHAT" });
   };
 };
 export { toggleAuth, authLogin, authLogout, authRegister };

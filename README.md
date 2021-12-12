@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# React JS - Knowledge Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Screenshoot
 
-## Available Scripts
+<img src="https://user-images.githubusercontent.com/60294028/145712330-019e91c3-c031-4f59-ba44-ff0464e99dec.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712341-ebf7adf9-87c5-48f3-ab2a-3d50bed6f882.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712343-8ee3ffbf-e267-4f7f-bc83-3409dc6c8449.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712345-9f2727b5-6325-458a-91fb-86e763bfda0a.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712349-3ea49795-747b-44a5-a910-268a093affae.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712355-5c10f0c4-0462-440b-9530-4c7b56186ada.PNG" width="30%"></img>
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+Website dengan fitur:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Register
+- Login
+- Add Product
+- Edit Product
+- Delete Product
+- Logout
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+[![React v17.0.2](https://img.shields.io/badge/React%20-v17.0.2-brightgreen.svg?style=flat)](https://github.com/facebook/react)
+[![Tailwind v3.0.0](https://img.shields.io/badge/Tailwind%20-v2.1.4-blue.svg?style=flat)](https://tailwindcss.com/docs/installation)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+1. [Node Js](https://nodejs.org/en/)
+2. Node_modules npm install or yarn install
+3. Backend API Knowledge Test [here](https://github.com/abdipriyangga/knowledge-be.git)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Download this Project or you can type `git clone https://github.com/abdipriyangga/knowledge-test.git`
+2. Open app's directory in CMD or Terminal
+3. Type npm install or yarn install
+4. Add .env file at root folder project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `REACT_APP_URL=http://localhost:5000`
 
-### `npm run eject`
+5. yarn start or npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Acknowledgements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Axios](https://axios-http.com/docs/api_intro)
+- [Redux](https://redux.js.org/)
+- [React Redux](https://react-redux.js.org/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© [Muhammad Abdi Priyangga](https://github.com/abdipriyangga)

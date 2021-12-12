@@ -3,7 +3,7 @@ const initialState = {
   token: null,
   errMsg: "",
   sccMsg: "",
-  isRegister: false
+  isRegister: false,
 };
 
 const auth = (state = initialState, action) => {
@@ -42,7 +42,7 @@ const auth = (state = initialState, action) => {
     case "SET_AUTH_LOGOUT": {
       return {
         ...state,
-        token: null
+        token: null,
       };
     }
     default: {

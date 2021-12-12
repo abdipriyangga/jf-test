@@ -1,15 +1,46 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { authLogout } from '../redux/actions/auth'
 import { connect } from 'react-redux'
+import Navbar from '../components/Navbar'
+import Swal from "sweetalert2";
 const Home = (props) => {
+  let navigate = useNavigate();
+  const onLogout = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You want to logout!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, Logout'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Logout!',
+          'Your session has been expired.',
+          'success'
+        )
+        props.authLogout();
+        navigate("/login");
+      }
+    })
+
+  };
   return (
     <div>
-      <h1>Ini Home</h1>
-      <Link to="register">
-        Register
-      </Link>
-      <button onClick={props.authLogout} className="focus:outline-none mt-3 text-white font-bold text-lg bg-yellow-900 px-28 py-4 rounded-lg lg:ml-9">Logout</button>
+      <header className="px-32 sticky top-0 bg-white shadow-lg">
+        <Navbar
+          home="text-yellow-900 font-bold"
+          product="text-gray-500"
+          cart="text-gray-500"
+          history="text-gray-500"
+        />
+      </header>
+      <h1 className='font-bold text-xl underline p-10'>Ini Home</h1>
+      <button onClick={onLogout} className="focus:outline-none mt-10 text-white font-bold text-lg bg-yellow-900 px-28 py-4 rounded-lg lg:ml-9">Logout</button>
     </div>
   )
 }
