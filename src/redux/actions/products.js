@@ -3,23 +3,23 @@ import { http } from "../../helpers/http";
 
 const { REACT_APP_URL: URL } = process.env;
 
-const createProducts = (productName, price, images, description, token) => {
+const createProducts = (productName, price, description, token) => {
   return async (dispatch) => {
     const form = new URLSearchParams();
-    const limitSize = 2 * 1040 * 1040;
-    if (images) {
-      if (images.size > limitSize) {
-        Swal.fire({
-          icon: "error",
-          title: "Opps!",
-          text: "Sorry file too large",
-          timer: 2000
-        });
-      }
-    }
+    // const limitSize = 2 * 1040 * 1040;
+    // if (images) {
+    //   if (images.size > limitSize) {
+    //     Swal.fire({
+    //       icon: "error",
+    //       title: "Opps!",
+    //       text: "Sorry file too large",
+    //       timer: 2000
+    //     });
+    //   }
+    // }
     form.append("productName", productName);
     form.append("price", price);
-    form.append("images", images);
+    // form.append("images", images);
     form.append("description", description);
 
     try {
@@ -83,24 +83,24 @@ const getProductId = (id) => {
 const updateProduct = (data, token, id) => {
   return async (dispatch) => {
     const form = new URLSearchParams();
-    const limitSize = 2 * 1040 * 1040;
-    if (data.images) {
-      if (data.images.size > limitSize) {
-        Swal.fire({
-          icon: "error",
-          title: "Opps!",
-          text: "Sorry file too large",
-          timer: 2000
-        });
-      }
-    }
+    // const limitSize = 2 * 1040 * 1040;
+    // if (data.images) {
+    //   if (data.images.size > limitSize) {
+    //     Swal.fire({
+    //       icon: "error",
+    //       title: "Opps!",
+    //       text: "Sorry file too large",
+    //       timer: 2000
+    //     });
+    //   }
+    // }
     form.append("productName", data.productName);
     form.append("price", data.price);
-    form.append("images", data.images);
+    // form.append("images", data.images);
     form.append("description", data.description);
 
     try {
-      const { data: newData } = await http(token).patch(`${URL}/products/${id}`, form.toString());
+      const { data: newData } = await http(token).put(`${URL}/products/${id}`, form.toString());
       dispatch({
         type: "UPDATE_PRODUCTS",
         payload: Swal.fire({
@@ -131,9 +131,12 @@ const deleteProduct = (token, id) => {
       const { data } = await http(token).delete(
         `${URL}/products/${id}`,
       );
-      dispatch(getProducts(token));
+      // dispatch(getProducts(token));
+      console.log('====================================');
+      console.log("DELETE ACTION: ", data);
+      console.log('====================================');
       dispatch({
-        type: 'DELETE_PRODUCT',
+        type: 'DELETE_PRODUCTS',
         payload: data.results,
       });
     } catch (err) {

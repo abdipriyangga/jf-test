@@ -40,7 +40,7 @@ const Home = (props) => {
         />
       </header>
       <h1 className='font-bold text-xl underline p-10'>Ini Home</h1>
-      <button onClick={onLogout} className="focus:outline-none mt-10 text-white font-bold text-lg bg-yellow-900 px-28 py-4 rounded-lg lg:ml-9">Logout</button>
+      <button onClick={onLogout} className="focus:outline-none mt-10 text-white font-bold text-lg bg-indigo-500 px-28 py-4 rounded-lg lg:ml-9">Logout</button>
     </div>
   )
 }

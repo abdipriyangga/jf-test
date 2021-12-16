@@ -44,7 +44,7 @@ const products = (state = initialState, action) => {
         errMsg: action.payload
       };
     }
-    case "DELETE_PRODUCT": {
+    case "DELETE_PRODUCTS": {
       return {
         ...state,
         sccMsg: action.payload

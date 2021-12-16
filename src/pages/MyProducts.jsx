@@ -1,39 +1,19 @@
 import React, { useEffect } from 'react'
 import CardListProduct from '../components/CardListProduct'
 import Navbar from '../components/Navbar'
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { getProducts, deleteProduct } from '../redux/actions/products';
 import { useNavigate, useParams } from 'react-router-dom';
 import Swal from "sweetalert2";
 const { REACT_APP_URL: URL } = process.env;
 const MyProducts = (props) => {
   const { data } = props.products;
-  const { id } = useParams();
   let navigate = useNavigate();
+  const dispatch = useDispatch();
   console.log('data class redux: ', data);
   useEffect(() => {
     props.getProducts(props.auth.token);
   }, []);
-  const onDelete = () => {
-    Swal.fire({
-      title: 'Are you sure?',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Your history has been deleted.',
-          'success'
-        )
-        props.deleteProduct(props.auth.token, id)
-        navigate('/products')
-      }
-    })
-  }
   return (
     <div>
       <header className="px-32 sticky top-0 bg-white shadow-md mb-8">
@@ -50,7 +30,7 @@ const MyProducts = (props) => {
         {data.map((product) => {
           return (
             <>
-              <CardListProduct key={product.id} img={`${URL}${product.images}`} name={product.productName} price={product.price} desc={product.description} toEdit={`${product.id}`} onClick={onDelete} />
+              <CardListProduct key={product.id} img={`${URL}${product.images}`} name={product.productName} price={product.price} desc={product.description} toEdit={`${product.id}`} toDelete={`${product.id}`} />
             </>
           )
         })}

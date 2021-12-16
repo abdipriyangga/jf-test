@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import AddProducts from "./AddProducts";
 import MyProducts from "./MyProducts";
 import EditProducts from "./EditProducts";
+import ProductDetail from "./ProductDetail";
 
 function PrivateOutlet() {
   const token = useSelector(state => state.auth.token)
@@ -38,7 +39,8 @@ function Router() {
         <Route path="login" element={<Login />} />
         <Route path="addProduct" element={<AddProducts />} />
         <Route path="products" element={<MyProducts />} />
-        <Route path="products/:id" element={<EditProducts />} />
+        <Route path="products/:id" element={<ProductDetail />} />
+        <Route path="products/:id/edit" element={<EditProducts />} />
       </Routes>
     </BrowserRouter>
   );
