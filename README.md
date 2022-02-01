@@ -20,7 +20,7 @@ Website dengan fitur:
 
 1. [Node Js](https://nodejs.org/en/)
 2. Node_modules npm install or yarn install
-3. Backend API Knowledge Test [here](https://github.com/abdipriyangga/knowledge-be.git)
+3. Backend API JF Test [here](https://github.com/abdipriyangga/jf-be.git)
 
 ## Getting Started
 

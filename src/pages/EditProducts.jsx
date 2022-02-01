@@ -17,15 +17,20 @@ const EditProducts = (props) => {
   const [stock, setStock] = useState(detail.stock);
   useEffect(() => {
     props.getProductId(id);
+    setProductName(detail.productName);
+    setPrice(detail.price);
+    setDescription(detail.description);
+    setStock(detail.stock);
   }, []);
+
   console.log("DATA FROM DETAIL: ", detail);
   const updateData = {
-    productName: productName,
-    price: price,
-    // images,
-    description: description,
-    stock: description
+    productName,
+    price,
+    description,
+    stock
   };
+
   const formData = (e) => {
     e.preventDefault();
     dispatch(updateProduct(props.auth.token, updateData, id));
@@ -36,6 +41,7 @@ const EditProducts = (props) => {
     // }, 500);
     // console.log('page to reload')
   };
+
   return (
     <div>
       <header className="px-32 sticky top-0 bg-white shadow-md mb-8">
