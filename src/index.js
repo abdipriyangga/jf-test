@@ -13,7 +13,6 @@ render(
     <PersistGate persistor={redux.persistor}>
       <Router />
     </PersistGate>
-    {/* <Router /> */}
   </Provider>,
   rootElement
 );

@@ -4,7 +4,7 @@ import React from 'react';
 import { DefaultUser } from '../assets';
 import { Link, useNavigate } from 'react-router-dom';
 
-const CardListProduct = ({ onClick, toEdit, toDelete, name, price, desc, img }) => {
+const CardListProduct = ({ onClick, toEdit, toDelete, name, price, desc, stock, img }) => {
   return (
     <div className="shadow-xl rounded-md bg-white w-full h-60 flex flex-col justify-center py-5">
       <div className="flex flex-col ml-20 lg:flex-row space-x-5 divide-x-4 divide-gray-900">
@@ -23,6 +23,7 @@ const CardListProduct = ({ onClick, toEdit, toDelete, name, price, desc, img }) 
             IDR {price}
           </h4>
           <h5 className="text-gray-600 font-normal text-sm w-100 text-justify mt-4"> {desc}</h5>
+          <h5 className="text-gray-600 font-normal text-sm w-100 text-justify mt-4"> Stock Product: {stock}</h5>
           <div className="flex flex-row space-x-5">
             <Link to={toEdit} className="bg-red-700 hover:bg-red-900 text-white text-sm text-center w-40 mt-3 rounded-md font-semibold">
               Read More

@@ -3,7 +3,7 @@ import { http } from "../../helpers/http";
 
 const { REACT_APP_URL: URL } = process.env;
 
-const createProducts = (productName, price, description, token) => {
+const createProducts = (productName, price, description, stock, token) => {
   return async (dispatch) => {
     const form = new URLSearchParams();
     // const limitSize = 2 * 1040 * 1040;
@@ -21,6 +21,7 @@ const createProducts = (productName, price, description, token) => {
     form.append("price", price);
     // form.append("images", images);
     form.append("description", description);
+    form.append("stock", stock);
 
     try {
       const { data } = await http(token).post(`${URL}/products`, form.toString());
@@ -80,9 +81,9 @@ const getProductId = (id) => {
     }
   }
 }
-const updateProduct = (data, token, id) => {
+const updateProduct = (token, data, id) => {
   return async (dispatch) => {
-    const form = new URLSearchParams();
+    const form = new FormData();
     // const limitSize = 2 * 1040 * 1040;
     // if (data.images) {
     //   if (data.images.size > limitSize) {
@@ -94,19 +95,22 @@ const updateProduct = (data, token, id) => {
     //     });
     //   }
     // }
-    form.append("productName", data.productName);
-    form.append("price", data.price);
-    // form.append("images", data.images);
-    form.append("description", data.description);
-
     try {
-      const { data: newData } = await http(token).put(`${URL}/products/${id}`, form.toString());
+      form.append("productName", data.productName);
+      form.append("price", data.price);
+      // form.append("images", images);
+      form.append("description", data.description);
+      form.append("stock", data.stock);
+
+      const { data: updateData } = await http(token).patch(`${URL}/products/${id}`, form);
+      console.log("FORM", form)
+      console.log("updateDATA", updateData)
       dispatch({
         type: "UPDATE_PRODUCTS",
         payload: Swal.fire({
           icon: "success",
           title: "Yeay...",
-          text: newData.message,
+          text: updateData.message,
           timer: 2000
         })
       });

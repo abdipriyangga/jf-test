@@ -1,8 +1,4 @@
-# React JS - Knowledge Test
-
-## Screenshoot
-
-<img src="https://user-images.githubusercontent.com/60294028/145712330-019e91c3-c031-4f59-ba44-ff0464e99dec.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712341-ebf7adf9-87c5-48f3-ab2a-3d50bed6f882.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712343-8ee3ffbf-e267-4f7f-bc83-3409dc6c8449.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712345-9f2727b5-6325-458a-91fb-86e763bfda0a.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712349-3ea49795-747b-44a5-a910-268a093affae.PNG" width="30%"></img> <img src="https://user-images.githubusercontent.com/60294028/145712355-5c10f0c4-0462-440b-9530-4c7b56186ada.PNG" width="30%"></img>
+# React JS - JF Test
 
 ## About
 
@@ -28,7 +24,7 @@ Website dengan fitur:
 
 ## Getting Started
 
-1. Download this Project or you can type `git clone https://github.com/abdipriyangga/knowledge-test.git`
+1. Download this Project or you can type `git clone https://github.com/abdipriyangga/jf-test.git`
 2. Open app's directory in CMD or Terminal
 3. Type npm install or yarn install
 4. Add .env file at root folder project

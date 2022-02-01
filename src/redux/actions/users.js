@@ -7,8 +7,9 @@ const getUserDetail = (token) => {
     try {
       const { data } = await http(token).get(`${URL}/users`);
       console.log("DATA: ", data.results);
+      console.log("TOKEN: ", token);
       dispatch({
-        type: "SET_GET_USER",
+        type: "SET_GET_USERS",
         payload: data.results,
       });
     } catch (error) {

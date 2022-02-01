@@ -30,7 +30,7 @@ const MyProducts = (props) => {
         {data.map((product) => {
           return (
             <>
-              <CardListProduct key={product.id} img={`${URL}${product.images}`} name={product.productName} price={product.price} desc={product.description} toEdit={`${product.id}`} toDelete={`${product.id}`} />
+              <CardListProduct key={product.id} img={`${URL}${product.images}`} name={product.productName} price={product.price} desc={product.description} stock={product.stock} toEdit={`${product.id}`} toDelete={`${product.id}`} />
             </>
           )
         })}

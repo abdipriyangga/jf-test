@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FormAddProd = ({ onSubmit, productName, price, description, setProductName, setPrice, setDescription }) => {
+const FormAddProd = ({ onSubmit, productName, price, description, stock, setProductName, setPrice, setDescription, setStock }) => {
   return (
     <div>
       <div className="p-12 mx-8">
@@ -23,6 +23,13 @@ const FormAddProd = ({ onSubmit, productName, price, description, setProductName
             <label className="text-gray-500 font-bold text-lg">Description :
               <div className="">
                 <textarea defaultValue={description} onChange={setDescription} className="h-16 p-3 border-2 rounded-lg mt-3 w-full bg-white-300 border-2 border-gray-400 text-gray-900 focus:outline-none font-bold text-sm mt-5" placeholder="description" />
+              </div>
+            </label>
+          </div>
+          <div>
+            <label className="text-gray-500 font-bold text-lg">Stock Product :
+              <div className="h-16 border-2 border-gray-400 rounded-lg mt-3">
+                <input defaultValue={stock} onChange={setStock} type="text" className="w-44 bg-white-300 text-gray-900 focus:outline-none font-bold text-sm mt-5 ml-4" placeholder="stock product" />
               </div>
             </label>
           </div>

@@ -2,24 +2,25 @@
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { DefaultUser, Message, ProfileNav } from "../assets";
+import { DefaultUser, Message } from "../assets";
 import { getUserDetail } from "../redux/actions/users";
 
-function Navbar({ home, product, cart, history, auth, users, img }) {
+function Navbar({ home, product, cart, auth, users, img }) {
   const dispatch = useDispatch();
   const user = users.users;
   useEffect(() => {
-    getUserDetail(auth.token);
-  });
+    getUserDetail(auth.token)
+  })
   console.log('====================================');
-  console.log("USERS: ", users.users);
+  console.log("USERS: ", user);
+  console.log("TOKEN: ", auth.token);
   console.log('====================================');
   return (
     <>
       <nav className="flex flex-row py-10 justify-between items-center">
         <Link to="/">
           <div className="flex space-x-2">
-            <span className="text-lg font-bold">Knowledge Test</span>
+            <span className="text-lg font-bold">JF Test</span>
           </div>
         </Link>
         <div>

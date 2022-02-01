@@ -10,10 +10,11 @@ const AddProducts = (props) => {
   const [productName, setProductName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
+  const [stock, setStock] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
-    props.createProducts(productName, price, description, props.auth.token);
+    props.createProducts(productName, price, description, stock, props.auth.token);
     navigate("/");
   };
   return (
@@ -28,7 +29,8 @@ const AddProducts = (props) => {
       </header>
       <h1 className="font-bold ml-40 text-2xl underline">Add Product</h1>
       <div className="p-10 mx-40 w-105">
-        <FormAddProd setProductName={(e) => setProductName(e.target.value)} setPrice={(e) => setPrice(e.target.value)} setDescription={(e) => setDescription(e.target.value)} onSubmit={onSubmit} />
+        <FormAddProd setProductName={(e) => setProductName(e.target.value)} setPrice={(e) => setPrice(e.target.value)} setDescription={(e) => setDescription(e.target.value)} setStock={(e) => setStock(e.target.value)}
+          onSubmit={onSubmit} />
       </div>
     </div>
   )

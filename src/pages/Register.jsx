@@ -28,39 +28,38 @@ const Register = (props) => {
   return (
     <main>
       <div className="flex flex-row">
-        <div className="bg-indigo-700 w-99 h-105"></div>
-        <div>
-          <div className="flex flex-row space-x-5 ml-82 p-10">
+        <div className="mx-60">
+          <div className="flex flex-row space-x-5 justify-between ml-96 p-10">
             <span className="mt-3">Already a member?</span>
-            <div className="bg-indigo-300 p-10 py-3 rounded-full font-bold text-white shadow-lg">
+            <div className="bg-yellow-600 p-10 py-3 rounded-full font-bold text-white shadow-lg">
               <Link to="/login">
                 Login
               </Link>
             </div>
           </div>
           <div>
-            <p className="text-black font-bold text-xl text-center">Register</p>
+            <p className="text-black font-bold text-2xl text-center">JF Register</p>
           </div>
           <div className="p-12 mx-8">
             <form onSubmit={onRegister} className="space-y-8">
               <div>
                 <label className="text-gray-500 font-bold text-lg">Name :
                   <div className="h-16 border-2 border-gray-400 rounded-lg mt-3">
-                    <input onChange={(e) => setName(e.target.value)} type="text" className="w-44 bg-white-300 text-gray-900 focus:outline-none font-bold text-sm mt-5 ml-4" placeholder="your name" />
+                    <input onChange={(e) => setName(e.target.value)} type="text" className="w-56 bg-white-300 text-gray-900 focus:outline-none font-bold text-sm mt-5 ml-4" placeholder="your name" />
                   </div>
                 </label>
               </div>
               <div>
                 <label className="text-gray-500 font-bold text-lg">Email Address :
                   <div className="h-16 border-2 border-gray-400 rounded-lg mt-3">
-                    <input onChange={(e) => setEmail(e.target.value)} type="text" className="w-44 bg-white-300 text-gray-900 focus:outline-none font-bold text-sm mt-5 ml-4" placeholder="your email" />
+                    <input onChange={(e) => setEmail(e.target.value)} type="text" className="w-56 bg-white-300 text-gray-900 focus:outline-none font-bold text-sm mt-5 ml-4" placeholder="your email" />
                   </div>
                 </label>
               </div>
               <div>
                 <label className="text-gray-500 font-bold text-lg">Password :
                   <div className="h-16 border-2 border-gray-400 rounded-lg mt-3">
-                    <input onChange={(e) => setPassword(e.target.value)} type="password" className="w-44 bg-white-300 text-gray-900 focus:outline-none font-bold text-sm mt-5 ml-4" placeholder="password" />
+                    <input onChange={(e) => setPassword(e.target.value)} type="password" className="w-56 bg-white-300 text-gray-900 focus:outline-none font-bold text-sm mt-5 ml-4" placeholder="password" />
                   </div>
                 </label>
               </div>
@@ -72,7 +71,7 @@ const Register = (props) => {
                 </select>
               </div>
               <div>
-                <button className="focus:outline-none text-white font-bold text-lg bg-indigo-300 py-4 rounded-lg w-full" type="submit">Register</button>
+                <button className="focus:outline-none text-white font-bold text-lg bg-yellow-600 py-4 rounded-lg w-full" type="submit">Register</button>
               </div>
             </form>
           </div>
